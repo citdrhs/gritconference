@@ -148,7 +148,6 @@ fieldset {
   font-size: 14px;
   top: 2100px;
   padding-top: 20px;
-
 }
 
 /* styling links for websites in the footer */
@@ -166,13 +165,16 @@ fieldset {
 /* ---------------HOME PAGE STYLING--------------- */
 /* Kera Parham: Home page */
 
-/* animation typing https://css-tricks.com/snippets/css/typewriter-effect/ */ 
-.container {
-  display: inline-block;
-}
+  
 
-/* styling typing animation */
-.typewriter h1 {
+
+  
+/* animation typing https://css-tricks.com/snippets/css/typewriter-effect/ */ 
+.container{
+  display: inline-block;
+
+}
+  .typewriter h1 {
   color: black;
   font-family: monospace;
   overflow: hidden; 
@@ -195,7 +197,7 @@ fieldset {
   from, to { border-color: transparent }
   50% { border-color: white }
 }
-
+  
 /* The calender format and the location picture*/
 .calender,.location{
   width: 25px;
@@ -354,6 +356,9 @@ tr:nth-child(even) {
   font-family: 'IBM Plex Mono', monospace;
 }
 
+/*
+
+}*/
 
 
 
@@ -420,6 +425,24 @@ tr:nth-child(even) {
 }
 
 /* general styling for buttons */
+
+/*
+.button, .buttonc {
+  border-radius: 5px;
+  text-decoration: none;
+  color:black;
+  background-color:white;
+  padding: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+*/
 .button {
   border-radius: 5px;
   text-decoration: none;
@@ -436,7 +459,6 @@ tr:nth-child(even) {
   width: 30%;
 }
 
-
 /* styling for slideshow */
 iframe {
   border: 1px solid black;
@@ -451,17 +473,20 @@ iframe {
 }
 
 /* styling the container for the student statements and deep run picture */
+/*
 #student_statements {
   margin-top: 100px;
   margin-left: 100px;
   margin-right: 100px;
-}
+}*/
 
 /* setting position of the deep run picture */
+/*
 #statement_pic {
   float: left;
   width:50%;
 }
+*/
 
 /* styling caption for deep run high school image */
 figcaption {
@@ -471,32 +496,100 @@ figcaption {
   padding-bottom: 7px;
 }
 
-/* position deep run image in the About the CIT page */
-#drpic{
+/* if the page is larger than 1000px, hallway pic and student statements will be side by side using flexbox */
+@media (min-width: 1000px) {
+    
+  
+  /* position deep run image in the About the CIT page */
+  /*
+  #drpic{
+    width: 100%;
+  }*/
+  
+  /* position student statements */
+  /*
+  #statements {
+    float: right;*/
+    /*width: 40%;
+  }
+  */
+  
+  .flex-container-statements {
+    display: flex;
+    flex-wrap: nowrap;
+    /*background-color: DodgerBlue;*/
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .flex-container-statements > div {
+    /*background-color: #f1f1f1;*/
+    width: 42%;
+    margin: 10px;
+    text-align: center;
+    line-height: 110%;
+    /*font-size: 30px;*/
+  }
+
+  .flex-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  }
+
+  .inlinebuttons{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    align-content: center;
+  }
+}
+
+/* if the page is smaller than 1000px, stack the hallway pic and the student statements on top of each other, instead of side by side */
+@media (max-width: 1000px)
+{
+  #statements-div
+  {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  #cit_curr
+  {
+    font-size: 12px;
+  }
+
+  legend
+  {
+    text-align: center;
+  }
+
+  #student_samples{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  iframe {
+    width:100%;
+  }
+
+  /*.comingsoon{
+  font-size: 75px;
+  }*/
+
+  .inlinebuttons{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+
+
+}
+
+.flex-container-statements img {
   width: 100%;
-  margin-top: 75px;
 }
-
-/* position student statements */
-#statements {
-  float: right;
-  width: 40%;
-}
-
-/* footer on About CIT page is separate because the layout of the about CIT page is different */
-.footerap{
-  display: block;
-  background-color:#98DFF14D;
-  text-align: center;
-  width: 100%;
-  font-size: 14px;
-  position: absolute;
-  top: 2100px;
-  padding-top: 20px;
-  margin-top: 100px;
-}
-
-
 
 /* --------------FEATURED COLLEGES, SPEAKERS, AND SPONSORS STYLING-------------- */
 .featuredhead{
@@ -532,21 +625,27 @@ figcaption {
 } 
 
 /* styling each of the boxes for the guests */
-.card {
+.card, .card2{
   padding: 10px;
   margin: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color:#0063b1; 
+   
 }
 
 /* Some left and right padding inside the container */
-.container {
+.containercard {
   padding: 0 16px;
   font-family: 'IBM Plex Mono', monospace;
+   display: block;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    align-content: center;
 }
 
 /* Clear floats */
-.container::after, .row::after {
+.containercard::after, .row::after {
   content: "";
   clear: both;
  /* display: table;*/
@@ -561,15 +660,18 @@ figcaption {
 
 
 /* add another flex container and center it */
+/*
 .flex-container2{
   display: flex;
   justify-content: center;
-}
+  align-items: center;  
+}*/
 
 /* add another flex container and center it */
 .flexcontainer3{
   display: flex;
   justify-content: center;
+  align-items: center;  
 }
 
 /* font size of titles on these pages */
@@ -584,9 +686,14 @@ figcaption {
   font-family: 'IBM Plex Mono', monospace;
 }
 
-#inlinebuttons{
+/*
+.inlinebuttons{
     display: inline-flex;
-}
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    align-content: center;
+}*/
 
 .buttonc {
   border-radius: 5px;
@@ -596,14 +703,11 @@ figcaption {
   padding: 10px;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
-  margin: auto;
   text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
   width: 250px;
   margin:10px;
+  align-self: center;
+  flex-grow: 2;
 }
   
 a{
@@ -617,5 +721,5 @@ a{
 }
 
 .comingsoon{
-  font-size: 150px
+  font-size: 50px;
 }
