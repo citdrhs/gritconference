@@ -723,3 +723,13 @@ a{
 .comingsoon{
   font-size: 50px;
 }
+.graphic{
+  display:flex;
+}
+#vince{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 80%;
+  height: 80%;
+}
