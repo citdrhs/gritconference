@@ -256,6 +256,7 @@ article h3 {
 /* styling for paragraph in header */
 .topdesc{
   font-size: 23px;
+  color:black;
 }
 
 /* styling for countdown */
@@ -306,7 +307,7 @@ section, .desc {
 header, .header{
   background-color:#0063b1;
   background-size: cover;
-  background-image: url("./glenallen3.jpg");
+  background-image: url("./glenallennew3.jpg");
   background-repeat: no-repeat;
   text-align:center;  
 }
@@ -595,7 +596,7 @@ figcaption {
 .featuredhead{
   background-color:#0063b1;
   background-size: cover;
-  background-image: url("./gl2.jpg");
+  background-image: url("./gl2new.jpg");
   background-repeat: no-repeat;
   padding-top: 100px;
   padding-bottom:  100px;
