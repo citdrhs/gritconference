@@ -687,11 +687,13 @@ figcaption {
   font-size: 35px;
   text-align: center;
   text-decoration: underline;
+  
 }
 .sponser_img{
   display: block; 
   margin-left: auto;
   margin-right: auto;
+  
 }
 /* style titles of featured guests pages */
 #featuredspon, #featuredvis, #FSpeaktitle {
@@ -746,4 +748,27 @@ a{
   margin-top: 50px;
   width: 80%;
   height: 80%;
+}
+/* Sponsers page gold/silver */
+#sponserbox{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*align-items: center; */
+  /*text-align: center;*/
+  /*align-content: center;*/
+}
+#goldlevel{
+  width: 50%;
+
+}
+
+#silverlevel{
+  width: 50%;
+ 
+}
+#markel{
+  width: 50%;
+  
 }
