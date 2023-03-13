@@ -170,12 +170,19 @@ fieldset {
 
   
 /* animation typing https://css-tricks.com/snippets/css/typewriter-effect/ */ 
+@media (min-width: 1000px){
+
+#title{
+  font-size: 48px; 
+  font-family: 'IBM Plex Mono', monospace;
+}
 .container{
   display: inline-block;
+  
 
 }
   .typewriter h1 {
-  color: black;
+  
   font-family: monospace;
   overflow: hidden; 
   border-right: .15em solid white; 
@@ -197,7 +204,25 @@ fieldset {
   from, to { border-color: transparent }
   50% { border-color: white }
 }
+}
+
+@media (max-width: 1000px){
+  #title{
+  font-size: 40px; 
+  font-family: 'IBM Plex Mono', monospace;
   
+}
+}
+
+@media (max-width: 600px){
+  #title{
+  font-size: 40px; 
+  font-family: 'IBM Plex Mono', monospace;
+  
+}
+}
+
+
 /* The calender format and the location picture*/
 .calender,.location{
   width: 25px;
@@ -226,12 +251,12 @@ fieldset {
   background: #98DFF14D;
 }
 
-/* styling main title of page */
+/* styling main title of page 
 #title{
-  font-size: 48px; 
+  font-size: 40px; 
   font-family: 'IBM Plex Mono', monospace;
 }
-
+*/
 /* center background image of header */
 .header_image{
   margin-left: auto;
@@ -660,13 +685,7 @@ figcaption {
 /* add some spacing and set the font for the header */
 
 
-/* add another flex container and center it */
-/*
-.flex-container2{
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-}*/
+
 
 /* add another flex container and center it */
 .flexcontainer3{
@@ -702,14 +721,6 @@ figcaption {
   font-family: 'IBM Plex Mono', monospace;
 }
 
-/*
-.inlinebuttons{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center; 
-    text-align: center;
-    align-content: center;
-}*/
 
 .buttonc {
   border-radius: 5px;
@@ -724,6 +735,43 @@ figcaption {
   margin:10px;
   align-self: center;
   flex-grow: 2;
+}
+@media (max-width: 600px){
+  .containercard {
+  padding: 0 16px;
+  font-family: 'IBM Plex Mono', monospace;
+   display: block;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    align-content: center;
+}
+
+/* Clear floats */
+.containercard::after, .row::after {
+  content: "";
+  clear: both;
+ /* display: table;*/
+}
+
+/* make the title white */
+.title {
+  color: white;
+}
+  .buttonc {
+  border-radius: 5px;
+  text-decoration: none;
+  color:black;
+  background-color:white;
+  padding: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  text-align: center;
+  width: 250px;
+  margin:10px;
+  align-self: center;
+  flex-grow: 2;
+}
 }
   
 a{
@@ -750,16 +798,13 @@ a{
   height: 80%;
 }
 /* Sponsers page gold/silver */
-#sponserbox{
+
+*#sponserbox{
   
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  /*align-items: center; */
-  /*text-align: center;*/
-  /*align-content: center;*/
 }
-#goldlevel{
+*#goldlevel{
   width: 50%;
 
 }
@@ -771,4 +816,27 @@ a{
 #markel{
   width: 50%;
   
+}
+#dme{
+  width: 100%;
+}
+#j2i{
+  width: 100%;
+}
+
+@media (max-width: 600px){
+#sponserbox{
+  
+  display: block;
+}
+  #markel{
+  width: 50%;
+  
+}
+#dme{
+  width: 100%;
+}
+  #j2i{
+  width: 100%;
+}
 }
