@@ -347,7 +347,7 @@ header, .header{
 }
 
 /* styling for tables (tracks and sessions and agenda) */
-.tracksession, .tracksession_td, .tracksession_th, .agenda_t, .agenda_td {
+.tracksession, .tracksession_td, .tracksession_th, .agenda_t, .agenda_td, .agenda_th {
   border: 2px solid #64CBD6;
   /*border: 2px solid #79FFA0;*/
   font-size: 22px;
