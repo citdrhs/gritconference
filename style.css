@@ -787,28 +787,19 @@ a{
 .comingsoon{
   font-size: 50px;
 }
-.graphic{
-  display:flex;
-}
-#vince{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  width: 40%;
-  height: 40%;
-}
+
+
 /* Sponsers page gold/silver */
 
-#sponserbox, #speakerbox{
+#sponserbox, #speakerbox, #topspeaker{
   
   display: flex;
   flex-direction: row;
 }
 
 
-#goldlevel, #column1{
+#goldlevel, #column1, #toprow, #topcolum{
   width: 50%;
-
 }
 
 #silverlevel, #column2{
@@ -825,12 +816,20 @@ a{
 #j2i{
   width: 100%;
 } 
-#mcgheebio, #devittbio, #nevillebio{
+#mcgheebio, #devittbio, #nevillebio, #parkerbio, .speakerbio{
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
   width: 75%;
   border: 10px solid #0063b1;
   /*padding: 10px;*/
   /*margin: 15px;*/
   
+}
+#vince, #vida{
+  margin-top: 50px;
+  width: 75%;
+  border: 10px solid #ffde59;
 }
 
 @media (max-width: 600px){
